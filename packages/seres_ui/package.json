@@ -1,0 +1,45 @@
+{
+  "name": "@seresui/pura",
+  "version": "1.0.3",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "scripts": {
+    "release": "release-it"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "seresui",
+    "vue3组件库"
+  ],
+  "author": {
+    "name": "晓白",
+    "url": "https://con-booklover.gitee.io/seres"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangxingkun/seresui.git"
+  },
+  "homepage": "https://con-booklover.gitee.io/seres",
+  "bugs": {
+    "url": "https://github.com/yangxingkun/seresui/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+
+
+
+
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "license": "MIT",
+  "description": "",
+  "typings": "lib/index.d.ts",
+  "dependencies": {
+    "@seresui/utils": "workspace:^1.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "play",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "private": true,
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@seresui/components": "workspace:^1.0.0"
+  }
+}

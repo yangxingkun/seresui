@@ -1,0 +1,9 @@
+{
+  "compilerOptions":{
+    "baseUrl": "./src",
+    // "outDir": "../seres_ui"
+  },
+  "rootDirs":"./src",
+  "extends":"../../tsconfig.json",
+  "include": ["src"]
+}

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "allowJs": true,
+    "strict": true, 
+    "target": "ES2015",
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "lib": ["esnext", "dom"],
+    "isolatedModules":false,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "unplugin-vue-define-options/macros-global"
+    ],
+    "paths": {
+      "*": ["node_modules/*"]
+    }
+  }
+}
