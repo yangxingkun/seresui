@@ -6,6 +6,9 @@
   "scripts": {
     "release": "release-it"
   },
+  "npm": {
+    "publish": true
+  },
   "files": [
     "es",
     "lib"
@@ -29,10 +32,6 @@
   "publishConfig": {
     "access": "public"
   },
-
-
-
-
   "sideEffects": [
     "**/*.css"
   ],
