@@ -13,6 +13,7 @@ importers:
       '@types/node': ^20.12.7
       '@vitejs/plugin-vue': ^5.0.4
       '@vue/runtime-core': ^3.4.21
+      git-cz: ^4.9.0
       gulp: ^5.0.0
       gulp-autoprefixer: ^8.0.0
       gulp-less: ^5.0.0
@@ -39,6 +40,7 @@ importers:
       '@types/node': 20.12.7
       '@vitejs/plugin-vue': 5.0.4_vite@5.2.9+vue@3.4.23
       '@vue/runtime-core': 3.4.23
+      git-cz: 4.9.0
       gulp: 5.0.0
       gulp-autoprefixer: 8.0.0_gulp@5.0.0
       gulp-less: 5.0.0
@@ -3334,6 +3336,11 @@ packages:
       fs-extra: 11.2.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /git-cz/4.9.0:
+    resolution: {integrity: sha512-cSRL8IIOXU7UFLdbziCYqg8f8InwLwqHezkiRHNSph7oZqGv0togId1kMTfKil6gzK0VaSXeVBb4oDl0fQCHiw==}
+    hasBin: true
     dev: true
 
   /git-raw-commits/2.0.11:
