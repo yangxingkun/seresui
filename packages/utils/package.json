@@ -16,6 +16,6 @@
   },
   "scripts": {
     "build": "vite build",
-    "release": "release-it ./dist"
+    "release": "release-it"
   }
 }

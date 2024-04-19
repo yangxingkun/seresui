@@ -37,7 +37,7 @@
     "after:bump": "echo 更新版本成功 ${version}"
   },
   "github": {
-    "release": true,
+    "release": false,
     "draft": false
   }
 }
