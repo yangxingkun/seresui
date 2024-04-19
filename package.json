@@ -8,7 +8,10 @@
   "scripts": {
     "dev": "vite play",
     "build": "pnpm -r --filter=./packages/* run build",
+    "build:utils": "pnpm -r --filter=./packages/utils run build",
     "build:seres_ui": "gulp -f packages/components/script/build/index.ts",
+
+
     "publish:seres_ui": "gulp -f packages/components/script/publish/index.ts",
     "auto:publish": "sh publish.sh",
     "docs:dev": "pnpm run --filter site docs:dev",
