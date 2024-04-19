@@ -60,7 +60,7 @@ importers:
 
   packages/components:
     specifiers:
-      '@seresui/utils': workspace:^1.0.0
+      '@seresui/utils': workspace:^1.0.8
     dependencies:
       '@seresui/utils': link:../utils
 
