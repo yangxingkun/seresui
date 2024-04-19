@@ -1,0 +1,21 @@
+{
+  "name": "@seresui/utils",
+  "version": "1.0.3",
+  "main": "./dist/lib/index.js",
+  "module": "./dist/es/index.mjs",
+  "description": "",
+  "private": "false",
+  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "author": "晓白",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build",
+    "release": "release-it ./dist"
+  }
+}
