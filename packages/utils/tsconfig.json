@@ -1,5 +1,5 @@
 {
-  "rootDirs": "./",
+  // "rootDirs": "./",
   "extends": "../../tsconfig.json",
   "include": ["add", "withinstall"]
 }
