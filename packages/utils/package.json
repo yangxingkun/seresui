@@ -1,10 +1,10 @@
 {
   "name": "@seresui/utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/lib/index.js",
   "module": "./dist/es/index.mjs",
   "description": "",
-  "private":"false",
+  "private": "false",
   "keywords": [],
   "files": [
     "dist"
@@ -16,4 +16,3 @@
     "release": "release-it ./dist"
   }
 }
-
