@@ -4,6 +4,7 @@
   "main": "./dist/lib/index.js",
   "module": "./dist/es/index.mjs",
   "description": "",
+  "private":"false",
   "keywords": [],
   "files": [
     "dist"
