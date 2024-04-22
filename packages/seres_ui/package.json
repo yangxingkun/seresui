@@ -39,6 +39,6 @@
   "description": "",
   "typings": "lib/src/index.d.ts",
   "dependencies": {
-    "@seresui/utils": "^1.0.8"
+    "@seresui/utils": "^1.0.10"
   }
 }

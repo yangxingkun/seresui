@@ -66,9 +66,9 @@ importers:
 
   packages/seres_ui:
     specifiers:
-      '@seresui/utils': workspace:^1.0.8
+      '@seresui/utils': ^1.0.10
     dependencies:
-      '@seresui/utils': link:../utils
+      '@seresui/utils': 1.0.10
 
   packages/utils:
     specifiers: {}
@@ -1235,6 +1235,10 @@ packages:
     transitivePeerDependencies:
       - '@types/node'
     dev: true
+
+  /@seresui/utils/1.0.10:
+    resolution: {integrity: sha512-VYui9RRI1YVbs2XnIg5Lrm1P4IHDsXC6+J5NoATnkIS8tazEinVG7hmOCvpSy6vckmSvpij+j/t5i67jTe7ODQ==}
+    dev: false
 
   /@shikijs/core/1.3.0:
     resolution: {integrity: sha512-7fedsBfuILDTBmrYZNFI8B6ATTxhQAasUHllHmjvSZPnoq4bULWoTpHwmuQvZ8Aq03/tAa2IGo6RXqWtHdWaCA==}
