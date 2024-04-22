@@ -1,6 +1,7 @@
 {
   "name": "@seresui/components",
   "version": "1.1.0",
+  "private":true,
   "description": "",
   "main": "../seres_ui/lib/index.js",
   "module": "../seres_ui/es/index.mjs",
