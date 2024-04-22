@@ -13,7 +13,8 @@ jobs:
     steps:
       # 官方action，将代码拉取到虚拟机
       - name: Checkout  ️ 
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
