@@ -1,5 +1,7 @@
 
 
+## [1.1.0](https://github.com/yangxingkun/seresui/compare/1.0.10...1.1.0) (2024-04-19)
+
 ### [1.0.10](https://github.com/yangxingkun/seresui/compare/1.0.7...1.0.10) (2024-04-19)
 
 

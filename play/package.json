@@ -11,6 +11,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@seresui/components": "workspace:^1.0.0"
+    "@seresui/pura": "workspace:^1.1.0"
   }
 }

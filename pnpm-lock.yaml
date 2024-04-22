@@ -75,9 +75,9 @@ importers:
 
   play:
     specifiers:
-      '@seresui/components': workspace:^1.0.0
+      '@seresui/pura': workspace:^1.1.0
     dependencies:
-      '@seresui/components': link:../packages/components
+      '@seresui/pura': link:../packages/seres_ui
 
   site:
     specifiers:

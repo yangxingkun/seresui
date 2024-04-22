@@ -1,6 +1,6 @@
 {
   "name": "@seresui/pura",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "main": "lib/index.js",
   "module": "es/index.mjs",
   "scripts": {
@@ -37,7 +37,7 @@
   ],
   "license": "MIT",
   "description": "",
-  "typings": "lib/index.d.ts",
+  "typings": "lib/src/index.d.ts",
   "dependencies": {
     "@seresui/utils": "workspace:^1.0.8"
   }
