@@ -16,7 +16,8 @@
     "auto:publish": "sh publish.sh",
     "docs:dev": "pnpm run --filter site docs:dev",
     "docs:build": "pnpm run --filter site docs:build",
-    "docs:deploy": "pnpm run --filter site docs:deploy"
+    "docs:deploy": "pnpm run --filter site docs:deploy",
+    "docs:deployg": "pnpm run --filter site docs:deployg"
   },
   "keywords": [],
   "author": "",
