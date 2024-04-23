@@ -1,4 +1,4 @@
-name: CI Github Pages
+name: SSH CI Github Pages
 on:
   #监听push操作
   push:

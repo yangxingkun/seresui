@@ -20,7 +20,6 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@esbuild-kit/cjs-loader": "^2.4.4",
     "@release-it/conventional-changelog": "^5.1.1",
     "@types/gulp": "^4.0.10",
     "@types/gulp-autoprefixer": "^0.0.33",
