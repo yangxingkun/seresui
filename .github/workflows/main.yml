@@ -54,5 +54,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           # branch: gh-pages # 部署后提交到那个分支
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PAT }}
           publish_dir: ./site/docs/.vitepress/dist # 这里填打包好的目录名称
