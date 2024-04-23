@@ -5,8 +5,8 @@ import nav from "./config/nav";
 import sidebar from "./config/sidebar";
 
 export default {
-    // base: process.env.NODE_ENV === 'production' ? '/seres/' : '/',//gitee
-    base: process.env.NODE_ENV === 'production' ? '/seresui/' : '/',//github
+    // base: process.env.NODE_ENV === 'production' ? '/seres/' : '/',
+    base: process.env.NODE_ENV === 'production' ? '/seresui/' : '/',//github和gitee //仓库名字保持一至 seresui
     // base:"/",//github
     lang: "zh", // 中文，英文设置en-US
     title: "杨兴坤编程学习笔记", // 浏览器标签标题

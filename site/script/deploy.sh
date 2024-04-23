@@ -14,7 +14,7 @@ git init
 
 # git branch -m main master
 
-git remote add seres https://gitee.com/con-booklover/seres.git
+git remote add seres https://gitee.com/con-booklover/seresui.git
 # git remote set-url seres https://gitee.com/seresui/seres.git
 
 git remote -v

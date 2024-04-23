@@ -10,17 +10,11 @@
     "build": "pnpm -r --filter=./packages/* run build",
     "build:utils": "pnpm -r --filter=./packages/utils run build",
     "build:seres_ui": "gulp -f packages/components/script/build/index.ts",
-
-
     "publish:seres_ui": "gulp -f packages/components/script/publish/index.ts",
     "auto:publish": "sh publish.sh",
     "docs:dev": "pnpm run --filter site docs:dev",
     "docs:build": "pnpm run --filter site docs:build",
-    "docs:deploy": "pnpm run --filter site docs:deploy",
-    "docs:deployg": "pnpm run --filter site docs:deployg",
-
-    "docs:build2": "npm run --filter site docs:build"
-
+    "docs:deploy": "pnpm run --filter site docs:deploy"
   },
   "keywords": [],
   "author": "",
