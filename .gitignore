@@ -7,5 +7,5 @@
 logs
 node_modules
 # seres_ui
-# dist
+dist
 coverage
