@@ -1,4 +1,4 @@
-name: https CI Github Pages
+name: SSH CI Github Pages
 on:
   #监听push操作
   push:
@@ -17,6 +17,11 @@ jobs:
         with:
           persist-credentials: false  # 这个设置很重要，尤其是在部署到 public repository 时
 
+      - name: Setup SSH keys
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
@@ -29,8 +34,11 @@ jobs:
           echo "Verify pnpm version"
           pnpm -v
 
+
+
       - name: Add pnpm to PATH
         run: echo "$(npm prefix -g)/bin" >> $GITHUB_PATH
+
 
       - name: Cache pnpm modules
         uses: actions/cache@v2
@@ -51,9 +59,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           # branch: gh-pages # 部署后提交到那个分支
-          token: ${{ secrets.PAT }}
-          # deploy_key: ${{ secrets.DEPLOY_KEY }}
+          # github_token: ${{ secrets.PAT }}
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
           publish_dir: ./site/docs/.vitepress/dist # 这里填打包好的目录名称
-
-
-# 
