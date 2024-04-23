@@ -52,8 +52,8 @@ jobs:
         with:
           # branch: gh-pages # 部署后提交到那个分支
           # token: ${{ secrets.MY_GITHUB_TOKEN }}
-          # github_token: ${{ secrets.GITHUB_TOKEN }}
-          personal_token: ${{ secrets.MY_GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # personal_token: ${{ secrets.MY_GITHUB_TOKEN }}
           # deploy_key: ${{ secrets.DEPLOY_KEY }}
           publish_dir: ./site/docs/.vitepress/dist # 这里填打包好的目录名称
 
