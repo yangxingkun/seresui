@@ -5,7 +5,8 @@ import nav from "./config/nav";
 import sidebar from "./config/sidebar";
 
 export default {
-    base: process.env.NODE_ENV === 'production' ? '/seres/' : '/',
+    // base: process.env.NODE_ENV === 'production' ? '/seres/' : '/',//gitee
+    base:"./",//github
     lang: "zh", // 中文，英文设置en-US
     title: "杨兴坤编程学习笔记", // 浏览器标签标题
     description: "软件开发计：开发文档和开发计划，完成功能工具，和待开发的功能和工具",

@@ -14,23 +14,46 @@ jobs:
       # 官方action，将代码拉取到虚拟机
       - name: Checkout  ️ 
         uses: actions/checkout@v2
+        with:
+          persist-credentials: false  # 这个设置很重要，尤其是在部署到 public repository 时
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-         node-version: '14'
-         cache: 'pnpm'
+          node-version: '18'
+          # cache: 'pnpm'
 
       - name: Install pnpm
-        run: npm install -g pnpm
-
-      - name: Install and Build   # 安装依赖、打包，如果提前已打包好无需这一步
         run: |
-          pnpm install
-          pnpm run docs:build
+          npm install -g pnpm@6.32.11
+          echo "Verify pnpm version"
+          pnpm -v
+
+
+
+      - name: Add pnpm to PATH
+        run: echo "$(npm prefix -g)/bin" >> $GITHUB_PATH
+
+
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run docs:build
 
       - name: Deploy   # 部署
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages # 部署后提交到那个分支
-          folder: ./site/docs/.vitepress/dist # 这里填打包好的目录名称
+          # branch: gh-pages # 部署后提交到那个分支
+          github_token: ${{ secrets.PAT }}
+          # deploy_key: ${{ secrets.DEPLOY_KEY }}
+          publish_dir: ./site/docs/.vitepress/dist # 这里填打包好的目录名称
