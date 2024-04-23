@@ -24,10 +24,11 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
 
-      - name: Install and Build   # 安装依赖、打包，如果提前已打包好无需这一步
-        run: |
-          pnpm install
-          pnpm run docs:build
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run docs:build
 
       - name: Deploy   # 部署
         uses: JamesIves/github-pages-deploy-action@v4.3.3
