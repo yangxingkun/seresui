@@ -29,11 +29,8 @@ jobs:
           echo "Verify pnpm version"
           pnpm -v
 
-
-
       - name: Add pnpm to PATH
         run: echo "$(npm prefix -g)/bin" >> $GITHUB_PATH
-
 
       - name: Cache pnpm modules
         uses: actions/cache@v2
@@ -54,6 +51,9 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           # branch: gh-pages # 部署后提交到那个分支
-          github_token: ${{ secrets.PAT }}
+          token: ${{ secrets.PAT }}
           # deploy_key: ${{ secrets.DEPLOY_KEY }}
           publish_dir: ./site/docs/.vitepress/dist # 这里填打包好的目录名称
+
+
+# 
