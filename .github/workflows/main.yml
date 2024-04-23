@@ -14,8 +14,13 @@ jobs:
       # 官方action，将代码拉取到虚拟机
       - name: Checkout  ️ 
         uses: actions/checkout@v2
+        # with:
+        #   persist-credentials: false  # 这个设置很重要，尤其是在部署到 public repository 时
+
+      - name: Setup SSH keys
+        uses: webfactory/ssh-agent@v0.5.3
         with:
-          persist-credentials: false  # 这个设置很重要，尤其是在部署到 public repository 时
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -54,5 +59,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           # branch: gh-pages # 部署后提交到那个分支
-          github_token: ${{ secrets.PAT }}
+          # github_token: ${{ secrets.PAT }}
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
           publish_dir: ./site/docs/.vitepress/dist # 这里填打包好的目录名称
