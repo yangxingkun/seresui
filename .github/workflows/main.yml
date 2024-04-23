@@ -25,7 +25,7 @@ jobs:
 
       - name: Install pnpm
         run: |
-          npm install -g pnpm
+          npm install -g pnpm@6.32.11
           echo "Verify pnpm version"
           pnpm -v
 
