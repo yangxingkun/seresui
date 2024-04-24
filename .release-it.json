@@ -33,7 +33,7 @@
     "publish": false
   },
   "hooks": {
-    "before:init": ["node ./scripts/set-version/index.js"],
+    "before:init": ["node ./scripts/set-version/update-dependencies.mjs"],
     "after:git:release": "echo git更新成功",
     "after:bump": "echo 更新版本成功 ${version}"
   },
