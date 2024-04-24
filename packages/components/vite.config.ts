@@ -2,6 +2,9 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
 import DefineOptions from "unplugin-vue-define-options/vite";
+import { name, version } from './package.json'
+import { resolve } from 'path'
+import { copyFileSync } from 'fs'
 export default defineConfig({
   build: {
     //打包后文件目录
@@ -51,6 +54,12 @@ export default defineConfig({
       outDir: ["../seres_ui/es/src", "../seres_ui/lib/src"],
       //指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
       tsconfigPath: "../../tsconfig.json",
+       /**
+         * 构建后回调钩子
+         */
+        afterBuild: (): void => {
+          move()
+        }
     }),
     DefineOptions(),
     {
@@ -78,3 +87,23 @@ export default defineConfig({
   //     environment: "happy-dom"
   // }
 });
+
+
+const move = (): void => {
+  // const files = [
+  //   {
+  //     input: './README.md',
+  //     outDir: 'dist-icon/README.md'
+  //   },
+  //   {
+  //     input: './package.json',
+  //     outDir: 'dist-icon/package.json'
+  //   },
+  //   { input: './packages/fighting-icon/LICENSE', outDir: 'dist-icon/LICENSE' }
+  // ] as const
+
+  // files.forEach((item): void => {
+  //   copyFileSync(item.input, item.outDir)
+  // })
+  console.warn('\n' + `${name} ${version} 版本打包成功 🎉🎉🎉` + '\n')
+}

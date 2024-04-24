@@ -30,9 +30,10 @@
     "commitMessage": "chore: Release v${version}"
   },
   "npm": {
-    "publish": true
+    "publish": false
   },
   "hooks": {
+    "before:init": ["node ./scripts/set-version/index.js"],
     "after:git:release": "echo git更新成功",
     "after:bump": "echo 更新版本成功 ${version}"
   },
