@@ -60,6 +60,6 @@ jobs:
         with:
           # branch: gh-pages # 部署后提交到那个分支
           # github_token: ${{ secrets.PAT }}
-          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          deploy_key: ${{ secrets.DEPLOY_KEY }} #公钥
           publish_dir: ./site/docs/.vitepress/dist # 这里填打包好的目录名称
           publish_branch: gh-pages
