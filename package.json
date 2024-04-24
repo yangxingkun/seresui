@@ -1,6 +1,6 @@
 {
   "name": "seresui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "private": "true",
@@ -16,7 +16,6 @@
     "docs:build": "pnpm run --filter site docs:build",
     "docs:deploy": "pnpm run --filter site docs:deploy",
     "release": "release-it"
-
   },
   "keywords": [],
   "author": "",
