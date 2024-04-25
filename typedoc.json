@@ -1,0 +1,11 @@
+{
+    "out": "site/docs/typedoc",
+    "name": "靓仔",
+    "entryPoints": ["packages/utils/add/index.ts"],
+    "theme": "default",
+    "exclude": ["**/*.test.ts", "**/node_modules/**"],
+    "tsconfig": "tsconfig.json",
+    "plugin": ["typedoc-plugin-markdown"],
+    "readme": "README.md"
+  }
+  
