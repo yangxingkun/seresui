@@ -1,1 +1,3 @@
-# monorepo+电
+# monorepo
+
+- "before:init": ["node ./scripts/set-version/update-dependencies.mjs"],
