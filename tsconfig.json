@@ -6,19 +6,20 @@
     "strict": true,
     "target": "ES2015",
     "module": "ESNext",
-    "skipLibCheck": true, 
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "lib": ["esnext", "dom"],
     "isolatedModules": false,
     "forceConsistentCasingInFileNames": true,
+    "sourceMap": true, // 为发出的 JavaScript 文件创建源映射文件
     "types": ["unplugin-vue-define-options/macros-global"],
     "paths": {
       "*": ["node_modules/*"]
     }
   },
-  "exclude": ["node_modules", "**/*.spec.ts", "packages/seres_ui/**",],
+  "exclude": ["node_modules", "**/*.spec.ts", "packages/seres_ui", "dist"],
   "include": [
     "packages/**/*.ts",
     "packages/**/*.d.ts",

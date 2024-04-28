@@ -28,9 +28,9 @@ export declare const Button: {
     type: {
         type: import('../../../../node_modules/vue').PropType<string>;
     };
-}>>, {}, unknown, {}, {}, import('../../../../node_modules/vue').ComponentOptionsMixin, import('../../../../node_modules/vue').ComponentOptionsMixin, {}, string, {}, {}, string, {}> & (import('../../../../node_modules/vue').VNodeProps & (import('../../../../node_modules/vue').AllowedComponentProps & import('../../../../node_modules/vue').ComponentCustomProps & ((new () => {
+}>>, {}, unknown, {}, {}, import('../../../../node_modules/vue').ComponentOptionsMixin, import('../../../../node_modules/vue').ComponentOptionsMixin, {}, string, {}, {}, string, {}> & import('../../../../node_modules/vue').VNodeProps & import('../../../../node_modules/vue').AllowedComponentProps & import('../../../../node_modules/vue').ComponentCustomProps & (new () => {
     $slots: {
         default?(_: {}): any;
     };
-}) & Plugin)));
+}) & Plugin<any[]>;
 export default Button;

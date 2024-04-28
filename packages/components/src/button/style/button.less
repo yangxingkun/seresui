@@ -1,0 +1,26 @@
+@color: red;
+@num: 20;
+@unit:px;
+
+a {
+    @color: green;
+    color: @color;  //直接复制
+    margin: ~"@{num}@{unit}"; //类似于模板字符串
+}
+
+link {
+    color:  @color;
+    width: 200px;
+    height:$width; //特例用法
+}
+
+//翻译为
+a {
+  color: green;
+  margin:20px;
+}
+link {
+  color: red;
+  width: 200px;
+  height: 200px;
+}

@@ -19,6 +19,21 @@ export default defineConfig({
       input: ['index.ts'],
       output: [
         {
+          name: 'SeresDesign', // 包名
+          format: 'umd',
+          exports: 'named',
+          sourcemap: false,
+          dir: '../seres_ui/umd',
+          entryFileNames: 'index.umd.js',
+          // chunkFileNames: '[name].js',
+          // assetFileNames: '[name].[ext]',
+          manualChunks: undefined,
+          inlineDynamicImports: false,
+          globals: {
+            vue: 'Vue'
+          } // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
+        },
+        {
           // 打包格式
           format: 'es',
           //打包后文件名
@@ -43,7 +58,12 @@ export default defineConfig({
       ]
     },
     lib: {
-      entry: './index.ts'
+      entry: './index.ts',
+      // name: 'seres-ui',
+      // formats:['es'],
+      // formats: ['es', 'cjs'],
+      // formats: ['es', 'umd', 'cjs'],
+      // fileName: 'seres-ui',
     }
   },
   plugins: [
