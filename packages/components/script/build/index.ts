@@ -1,9 +1,9 @@
-import { series, parallel, src, dest } from "gulp";
-import less from "gulp-less";
-import autoprefixer from "gulp-autoprefixer";
-import { delPath, currentFileName } from "../utils/delpath";
-import { componentPath, pkgPath } from "../utils/paths";
-import run from "../utils/run";
+import { series, parallel, src, dest } from 'gulp';
+import less from 'gulp-less';
+import autoprefixer from 'gulp-autoprefixer';
+import { delPath, currentFileName } from '../utils/delpath';
+import { componentPath, pkgPath } from '../utils/paths';
+import run from '../utils/run';
 
 // 删除 seres_ui
 export const removeDist = () => {
@@ -21,7 +21,7 @@ export const buildStyle = () => {
 
 //打包组件
 export const buildComponent = async () => {
-  run("pnpm run build", componentPath);
+  run('pnpm run build', componentPath);
 };
 
 // parallel 并行
@@ -32,4 +32,4 @@ export default series(
     async () => buildStyle(),
     async () => buildComponent()
   )
-) as ()=>void;
+) as () => void;

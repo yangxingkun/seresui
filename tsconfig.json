@@ -3,26 +3,26 @@
     "baseUrl": ".",
     "jsx": "preserve",
     "allowJs": true,
-    "strict": true, 
+    "strict": true,
     "target": "ES2015",
     "module": "ESNext",
-    "skipLibCheck": true,
+    "skipLibCheck": true, 
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    
     "moduleResolution": "node",
     "lib": ["esnext", "dom"],
-    "isolatedModules":false,
+    "isolatedModules": false,
     "forceConsistentCasingInFileNames": true,
-    "types": [
-      "unplugin-vue-define-options/macros-global"
-    ],
+    "types": ["unplugin-vue-define-options/macros-global"],
     "paths": {
       "*": ["node_modules/*"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
+  "exclude": ["node_modules", "**/*.spec.ts", "packages/seres_ui/**",],
+  "include": [
+    "packages/**/*.ts",
+    "packages/**/*.d.ts",
+    "packages/**/*.vue",
+    "docs/**/*.vue"
   ]
 }

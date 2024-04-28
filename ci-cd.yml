@@ -1,46 +1,38 @@
-name: Node.js CI/CD
-
+name: Publish package to NPM
 on:
   push:
     branches:
-      - main
-      
+      - master
   pull_request:
     branches:
-      - main
+      - master
 jobs:
-  build-and-deploy:
+  publish:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-        registry-url: 'https://registry.npmjs.org/'
+      - uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: npm install
+      - name: Setup pnpm env
+        uses: pnpm/action-setup@v2
+        with:
+          version: 6.32.16
 
-    - name: Build
-      run: npm run build
+      - name: Setup node env
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'pnpm'
 
-    - name: Test
-      run: npm test
+      - name: Install node_modules
+        run: pnpm install --frozen-lockfile
 
-    - name: Publish to npm
-      if: github.ref == 'refs/heads/main'
-      run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-
-    - name: Push changes to GitHub
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "Automated commit message" --allow-empty
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build module
+        # 进行包构建
+        run: pnpm build
+        
+      - name: Run publish script
+        # 进行包发布
+        run: pnpm release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     //压缩
     minify: false,
-    emptyOutDir:true,
+    emptyOutDir: true,
     rollupOptions: {
       input: ['index.ts'],
       output: [
@@ -15,7 +15,7 @@ export default defineConfig({
           entryFileNames: '[name].mjs',
           //让打包目录和我们目录对应
           preserveModules: true,
-          exports:"named",
+          exports: 'named',
           //配置打包根目录
           dir: resolve(__dirname, './dist/es')
         },
@@ -25,7 +25,7 @@ export default defineConfig({
           entryFileNames: '[name].js',
           //让打包目录和我们目录对应
           preserveModules: true,
-          exports:"named",
+          exports: 'named',
           //配置打包根目录
           dir: resolve(__dirname, './dist/lib')
         }
@@ -39,7 +39,7 @@ export default defineConfig({
 
   plugins: [
     dts({
-      entryRoot:"./index.ts",
+      entryRoot: './index.ts',
       outDir: [
         resolve(__dirname, './dist/es'),
         resolve(__dirname, './dist/lib')
