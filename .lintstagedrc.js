@@ -1,15 +1,13 @@
 module.exports = {
-  '**/*.{ts,tsx}': [
-    "tsc --noEmit", // 检查 TypeScript
+  "**/*.{ts,tsx}": [
+    () => "tsc -p tsconfig.json --noEmit",
     "eslint --cache --fix",
   ],
-  '**/*.{js,jsx}': [
+  "**/*.{js,jsx}": [
     "eslint --cache --fix",
   ],
   "**/*.vue": [
     "eslint --cache --fix",
   ],
-  "**/*.{css,less}": [
-    "stylelint --cache --fix",
-  ]
-}
+  "**/*.{css,less}": ["stylelint --cache --fix"],
+};
