@@ -17,6 +17,7 @@ module.exports = {
     rules: {
         // 开启 Prettier 自动格式化功能
         "prettier/prettier": true,
+        "no-duplicate-selectors":null,
         // "selector-class-pattern": null , // 自定义类名格式规则
         "selector-class-pattern": "^[a-z][a-zA-Z0-9]*([-_]{1,9}[a-zA-Z0-9]+)*$"  // 支持单个或双连字符和下划线
         // 自定义类名格式规则

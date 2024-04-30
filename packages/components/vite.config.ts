@@ -58,7 +58,7 @@ export default defineConfig({
       ]
     },
     lib: {
-      entry: './index.ts',
+      entry: './index.ts'
       // name: 'seres-ui',
       // formats:['es'],
       // formats: ['es', 'cjs'],

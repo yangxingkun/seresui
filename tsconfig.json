@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "jsx": "preserve",
+    "noEmit": false,
     "allowJs": true,
     "strict": true,
     "target": "ES2015",

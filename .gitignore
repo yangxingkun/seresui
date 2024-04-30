@@ -6,6 +6,6 @@
 *.tgz
 logs
 node_modules
-# seres_ui
+seres_ui
 dist
 coverage
