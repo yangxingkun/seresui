@@ -4,6 +4,11 @@
   "description": "",
   "main": "index.js",
   "private": "true",
+  "workspaces": [
+    "packages/*" ,
+    "play",
+    "site"
+  ],
   "scripts": {
     "dev": "vite play",
     "build": "pnpm -r --filter=./packages/* run build",
@@ -21,6 +26,8 @@
     "lint-staged": "lint-staged",
     "commit:comment": "引导设置规范化的提交信息",
     "changeset": "changeset",
+    "update-changelog": "changeset version",
+    "preinstall": "npx only-allow pnpm",
     "changeset:release": "changeset publish --registry=https://registry.npmjs.com/ --access=public",
     "commit": "cz"
   },
