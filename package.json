@@ -22,7 +22,7 @@
     "commit:comment": "引导设置规范化的提交信息",
     "changeset": "changeset",
     "changeset:release": "changeset publish --registry=https://registry.npmjs.com/ --access=public",
-    "commit": "git-cz"
+    "commit": "cz"
   },
   "keywords": [],
   "author": "",
@@ -91,7 +91,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-customizable"
+      "path": "./node_modules/cz-customizable"
     }
   }
 }
