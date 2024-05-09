@@ -5,6 +5,7 @@
 *.log
 *.tgz
 logs
+.stylelintcache
 node_modules
 seres_ui
 dist
