@@ -1,35 +1,34 @@
 {
-    "name": "@seresui/cli",
-    "version": "0.0.0",
-    "description": "A cli for @seresui/manager and @seresui/server",
-    "main": "index.js",
-    "bin": {
-      "create-seresui": "index.js"
-    },
-    "license": "MIT",
-    "author": "YANGXINGKUN",
-    "homepage": "https://github.com/LuciferHuang/heimdallr-sdk/blob/main/packages/cli/README.md",
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/LuciferHuang/heimdallr-sdk.git"
-    },
-    "bugs": {
-      "url": "https://github.com/LuciferHuang/heimdallr-sdk/issues"
-    },
-    "keywords": [
-      "seresui",
-      "cli",
-      "manager",
-      "server"
-    ],
-    "publishConfig": {
-      "access": "public"
-    },
-    "dependencies": {
-      "boxen": "^5.1.2",
-      "chalk": "^4.1.2",
-      "ejs": "^3.1.6",
-      "inquirer": "^8.1.5"
-    }
+  "name": "@seresui/cli",
+  "version": "0.0.0",
+  "description": "A cli for @seresui/manager and @seresui/server",
+  "main": "index.js",
+  "bin": {
+    "create-seresui": "index.js"
+  },
+  "license": "MIT",
+  "author": "YANGXINGKUN",
+  "homepage": "https://github.com/yangxingkun/seresui/tree/main/packages/cli/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangxingkun/seresui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yangxingkun/seresui/issues"
+  },
+  "keywords": [
+    "seresui",
+    "cli",
+    "manager",
+    "server"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "boxen": "^5.1.2",
+    "chalk": "^4.1.2",
+    "ejs": "^3.1.6",
+    "inquirer": "^8.1.5"
   }
-  
+}

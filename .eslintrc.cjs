@@ -28,5 +28,7 @@ module.exports = {
         "@typescript-eslint/ban-ts-comment": "off",
         "vue/multi-word-component-names": "off",
         '@typescript-eslint/no-var-requires': 'off', // 强制使用 import 且不允许使用 require 设置off关闭检查
+        "@typescript-eslint/no-unused-vars":"warn",
+        "@typescript-eslint/no-empty-function":"warn",
     }
 };
