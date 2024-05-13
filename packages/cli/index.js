@@ -19,7 +19,8 @@ prompt([
     type: 'list',
     name: 'template',
     message: 'Please select a template ?',
-    choices: ['client', 'unibest', 'server', 'server with RabbitMQ'],
+    choices: ['client', 'unibest'],
+    // choices: ['client', 'unibest', 'server', 'server with RabbitMQ'],
     default: 'client'
   }
 ]).then(async (templateAnwsers) => {

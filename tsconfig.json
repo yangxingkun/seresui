@@ -20,7 +20,7 @@
       "*": ["node_modules/*"]
     }
   },
-  "exclude": ["node_modules", "**/*.spec.ts", "packages/seres_ui", "dist"],
+  "exclude": ["node_modules", "**/*.spec.ts", "packages/seres_ui", "dist","**/unibest"],
   "include": [
     "packages/**/*.ts",
     "packages/**/*.d.ts",
