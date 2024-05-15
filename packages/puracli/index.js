@@ -1,4 +1,5 @@
 #! /usr/bin/env node
+
 import commandLineArgs from 'command-line-args';
 import commandLineUsage from 'command-line-usage';
 import chalk from 'chalk';
@@ -6,40 +7,8 @@ import prompts from 'prompts';
 import download from 'download-git-repo';
 import ora from 'ora';
 import fs from 'fs';
-//帮助内容
-const helpSections = [
-  {
-    header: 'create-kitty',
-    content: '一个快速生成组件库搭建环境的脚手架'
-  },
-  {
-    header: 'Options',
-    optionList: [
-      {
-        name: 'version',
-        typeLabel: '{underline boolean}',
-        description: '版本号'
-      },
-      {
-        name: 'arg1',
-        typeLabel: '{underline string}',
-        description: '参数1'
-      },
-      {
-        name: 'arg2',
-        typeLabel: '{underline number}',
-        description: '参数2'
-      }
-    ]
-  }
-];
-//配置命令参数
-const optionDefinitions = [
-  { name: 'help', alias: 'h', type: Boolean },
-  { name: 'version', alias: 'v', type: Boolean },
-  { name: 'arg1', type: String },
-  { name: 'arg2', type: Number }
-];
+import { helpSections, optionDefinitions } from './lib/helper.js';
+import { successBox, errorBox } from './lib/utils.js';
 const options = commandLineArgs(optionDefinitions);
 
 const promptsOptions = [
@@ -61,8 +30,14 @@ const promptsOptions = [
     name: 'template',
     message: 'select a framework',
     choices: [
-      { title: 'kitty-ui', value: 1 },
-      { title: 'unibest', value: 2 }
+      {
+        title: 'Xmw-Admin',
+        value: 1
+      },
+      {
+        title: 'unibest-MiniProgram',
+        value: 2
+      }
     ]
   }
 ];
@@ -74,24 +49,29 @@ const gitClone = (remote, name, option) => {
     download(remote, name, option, (err) => {
       if (err) {
         loadingOra.fail();
-        console.log('err', chalk.red(err));
+        process.stdout.write(
+          errorBox(err, '因为克隆GitHub项目，网络稳定很重要，创建失败！')
+        );
         reject(err);
         return;
       }
       loadingOra.succeed(chalk.green('success'));
-      console.log(`Done. Now run:\r\n`);
-      console.log(chalk.green(`cd ${name}`));
-      console.log(chalk.blue('pnpm install'));
-      console.log('pnpm dev\r\n');
+
+      process.stdout.write(
+        successBox(
+          `您可以通过以下命令运行项目：\n\n$ cd ${name} \n$ pnpm install \n$ pnpm dev`,
+          `${name} 创建完成 🎉`
+        )
+      );
       resolve();
     });
   });
 };
 const remoteList = {
-  1: 'https://gitee.com/geeksdidi/kittyui.git',
-  2: 'https://github.com/yangxingkun/unibest.git'
+  1: 'https://github.com/yangxingkun/Xmw-Admin.git',
+  2: 'https://github.com/codercup/unibest.git'
 };
-const branch = 'master';
+const branch = 'main';
 const getInputInfo = async () => {
   const res = await prompts(promptsOptions);
   if (!(res.name && res.template)) return;

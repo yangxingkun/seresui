@@ -1,10 +1,13 @@
 {
   "name": "@seresui/cli",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "description": "A cli for @seresui/manager and @seresui/server",
   "main": "index.js",
   "bin": {
-    "create-seresui": "index.js"
+    "create-serescli": "index.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "license": "MIT",
   "author": "YANGXINGKUN",
@@ -22,9 +25,6 @@
     "manager",
     "server"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "boxen": "^5.1.2",
     "chalk": "^4.1.2",

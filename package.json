@@ -102,6 +102,7 @@
     }
   },
   "dependencies": {
-    "@seresui/cli": "^0.0.0"
+    "@seresui/cli": "^0.0.0",
+    "@seresui/pura-cli": "^0.0.8"
   }
 }
